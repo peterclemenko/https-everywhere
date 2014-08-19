@@ -1,11 +1,14 @@
-<ruleset name="Bohemia Interactive (partial)">
+<ruleset name="Bohemia Interactive (partial)" platform="mixedcontent">
   <target host="bistudio.com" />
   <target host="www.bistudio.com" />
   <target host="community.bistudio.com" />
   <target host="store.bistudio.com" />
+  <target host="forums.bistudio.com" />
 
-	<securecookie host="^(?:community|store)\.bistudio\.com$" name=".+" />
+	<securecookie host="^(?:community|forums|store)\.bistudio\.com$" name=".+" />
 
   <rule from="^http://(www\.)?bistudio\.com/" to="https://www.bistudio.com/" />
-  <rule from="^http://(www\.)?(community\.|store\.)?bistudio\.com/" to="https://community.bistudio.com/" />
+  <rule from="^http://(www\.)?community\.bistudio\.com/" to="https://community.bistudio.com/" />
+  <rule from="^http://(www\.)?store\.bistudio\.com/" to="https://store.bistudio.com/" />
+  <rule from="^http://(www\.)?forums\.bistudio\.com/" to="https://forums.bistudio.com/" />
 </ruleset>
